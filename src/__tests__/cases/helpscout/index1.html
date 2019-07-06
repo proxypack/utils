@@ -1,0 +1,234 @@
+
+ <!DOCTYPE html>
+ <html lang=en>
+ <!--[if IE]><![endif]-->
+ <head>
+ <title data-cy=dashboardTitle>
+ Dashboard - sometestco
+ </title>
+ <meta charset=utf-8>
+ <meta http-equiv=X-UA-Compatible content="IE=Edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+ <meta name=robots content="noindex, nofollow">
+ <meta name=viewport content="width=980">
+ <meta name=author content="Help Scout">
+ <meta name=csrf-token content=b6801cd65c075d19d66888ca93b7c214bd8949af6ff62c5eea5371d441e7747a9ab23da44fe3046314acab8b9a254f1de7ffb95ff060dabc91163355e61713b3>
+ <link rel="shortcut icon" type="image/ico" href="https://dhmmnd775wlnp.cloudfront.net/3398189b92/images/favicon.ico">
+ <link rel=apple-touch-icon-precomposed href="https://dhmmnd775wlnp.cloudfront.net/3398189b92/images/ios2.png">
+ <link rel=mask-icon href="https://dhmmnd775wlnp.cloudfront.net/3398189b92/images/helpscout-mark-pin.svg" color="#2A4258">
+ <link rel=stylesheet media=all href="https://dhmmnd775wlnp.cloudfront.net/3398189b92/css/styles.css">
+ <link rel=stylesheet media=all href="https://dhmmnd775wlnp.cloudfront.net/3398189b92/css/icons.css">
+ <script>window.jsResourceBaseUrl='https://dhmmnd775wlnp.cloudfront.net/3398189b92/js/apps/dist/'</script>
+ <script type="text/javascript" src="https://dhmmnd775wlnp.cloudfront.net/3398189b92/js/apps/dist/pre-global-2f76a7edb70ee2388647.js" webpack-entry=pre-global></script>
+ <script>window.hsGlobal={apiPath:'/api/v0/',appVersion:'3398189b92',companyId:'74318',features:{"isApiEnabled":true,"isWorkflowsEnabled":true,"isReportsEnabled":true,"isUserTagAccess":true,"isUserSavedRepliesAccess":false,"isUserWorkflowsAccess":false,"isUserManageCustomFieldsEnabled":false,"isUserManageTeamsEnabled":false,"isDocsInstalled":true,"isDocsPublicSite":true,"isApiInstalled":true,"isCustomFieldsEnabled":true,"maxCustomFields":false,"isTeamsEnabled":true,"maxTeamMembers":false,"isAutoReplyEnabled":true,"isBeacon2Enabled":true,"isBeacon2GreetersEnabled":true,"isBeacon2AnonymousChatEnabled":false,"isWaitingSinceEnabled":true,"isMailboxToMailboxEnabled":true,"isImportImprovementsEnabled":false,"isSalesTaxEnabled":true,"isNewPaymentFlowEnabled":false,"isReportsMvpEnabled":true,"isCustomerListEnabled":true,"slackV2":false,"isPerMailboxChatAvailabilityEnabled":false,"areDocsIncluded":true,"isHelpDeskEnabled":true,"isDocsEnabled":true,"isChatEnabled":true,"realtime":{"ticketUpdates":true},"isKbShortcutsEnabled":true},assetBasePath:'https://dhmmnd775wlnp.cloudfront.net/3398189b92/',imagePath:'https://dhmmnd775wlnp.cloudfront.net/3398189b92/images/',memberId:'271315',memberChatCount:1,accountDropdown:{"id":271315,"initials":"JG","hasPhoto":true,"photoUrl":"https:\/\/d33v4339jhl8k0.cloudfront.net\/users\/271315.132546.png","chatCount":1,"chatStatus":1,"isOwner":true,"showReferralShareLink":true,"showBeaconPromo":false},path:'/',timeFormat:'1',timezone:'Australia/Sydney',countryCode:'',chatMailboxIds:[138368,138367,125385,171010],pubnub:{"publishKey":"pub-c-303b4591-0fcd-47f1-8e8e-b2176f48a1fe","subscribeKey":"sub-c-2f1cc36e-7979-11e8-a728-026b18d394b5","authKey":"f1424951-811b-430a-9825-beeadb39ca10","channels":["mailbox.138368v1","mailbox.138367v1","mailbox.125385v1","mailbox.171010v1","company.74318v1"],"channelGroups":["agent.271315v1"],"uuid":271315,"state":{"id":271315,"chatStatus":1}},pusher:{"version":2,"environment":"","namespace":"74318.v2","pusherAppKey":"e715f34dfbd75ea91468","pusherCluster":"helpscout"},helpDeskAppName:'Help Desk',knowledgeBaseAppName:'Docs',isDocsInstalled:true,isHelpDeskInstalled:true,isAutoReplyEnabled:true,correlationId:"09a460b3-56ff-4825-beef-559411cd8e9a",referralShare:{"showIcon":false,"showLink":true,"shareUrl":"https:\/\/www.helpscout.com\/referral\/?code=UTRrK2M1d1lacmhpN1N2V0d5aWVlSXVlVTFuOVQrc1cwMVI2RE12UEdtQ0dGUT09OkZsM2lrU2ttT3I1OE8wNlI."},helpBeaconId:"ba662315-1003-4983-9133-0641b60bef51",helpBeaconCdnDomain:"beacon-v2.helpscout.net",helpBeaconUser:{"name":"Jeff Goldblum","email":"buzz+++dev@helpscout.com","avatar":"https:\/\/d33v4339jhl8k0.cloudfront.net\/users\/271315.132546.png","signature":"22c4aad743ba53fba0b83dd730ab5b65516a22353133bf3d828e1a42fad2bfc3","Role":"Account Owner","Plan":"Plus"},helpBeaconDisabled:false,isHelpBeaconChatEnabled:true,showHelpBeaconFAB:true,};(function(){var member={id:hsGlobal.memberId,name:'Jeff Goldblum',email:'buzz+++dev@helpscout.com',appVersion:hsGlobal.appVersion,companyId:hsGlobal.companyId,companyName:'sometestco'};var tags={company:'id:'+hsGlobal.companyId};setupRaven(member,tags);})();function setupRaven(member,tags){Raven.config('https://ee3818a558274a7996702ad2b7239259@sentry.io/146666',{release:hsGlobal.appVersion,tags:tags}).install();member&&Raven.setUserContext(member);}</script>
+ <link rel=search type="application/opensearchdescription+xml" href="/osd.xml">
+ </head>
+ <body class=one-col>
+ <div id=notyContainer></div>
+ <section id=wrap>
+ <header id=header>
+ <ul class=nav-main>
+ <li><a href="/" class="dashboard active" title="Dashboard (G,H)"><i class=icon-hs-mark></i></a></li>
+ <li class="dropdown mailboxes">
+ <a href="#" data-target="#" class=dropdown-toggle data-toggle=dropdown>Mailboxes <b class=caret></b></a>
+ <div role=menu class=dropdown-menu>
+ <ul class=header-menu>
+ <li>
+ <a href="/mailbox/ba45017a27b54f63/">Alpha 語 Huáyǔ; 中文</a>
+ </li>
+ <li>
+ <a href="/mailbox/ea299670008190d4/">Dashing Dish</a>
+ </li>
+ <li>
+ <a href="/mailbox/7e11446fbbe6e48d/">Dont_Confirm!</a>
+ </li>
+ <li>
+ <a href="/mailbox/f34ee3176418eeea/">No</a>
+ </li>
+ <li>
+ <a href="/mailbox/ae8430630c8c652e/">Support</a>
+ </li>
+ <li>
+ <a href="/mailbox/1deb6df2752f80b8/">Vesnaalias</a>
+ </li>
+ <li>
+ <a href="/mailbox/1e72811f97b0c77a/">VesnaNotConfirmed</a>
+ </li>
+ </ul>
+ </div>
+ </li>
+ <li class="dropdown docs" id=docsNav>
+ <a href="#" data-target="#" data-toggle=dropdown class=dropdown-toggle>Docs <b class=caret></b></a>
+ <div class=dropdown-menu id=docsNavMenu role=menu>
+ <ul class=header-menu>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">Test Docs V1</a></li>
+ <li><a href="/docs/5ba3fa9e2c7d3a04dd5ace9f/" title="Test Docs V1">something</a></li>
+ <li><a href="/docs/5ba8dbe02c7d3a04dd5ae1f1/" title="Test Docs V1">Something Else</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">Remove me</a></li>
+ <li><a href="/docs/5bca1615042863158cc7a66e/" title="Remove me">Collection</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">private docs</a></li>
+ <li><a href="/docs/5a02caad04286331992448bf/" title="private docs">col1</a></li>
+ <li><a href="/docs/5a84236c0428634376d01d2e/" title="private docs">col2</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">just-another-docs-site</a></li>
+ <li><a href="/docs/5ba396e82c7d3a04dd5ac82e/" title=just-another-docs-site>just another collection</a></li>
+ <li><a href="/docs/5ba37563042863158cc68fdb/" title=just-another-docs-site>Test Collection V1</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">NO-TOUCHY</a></li>
+ <li><a href="/docs/5af23cc80428631126f1d81f/" title=NO-TOUCHY>NO-TOUCHY-COLLECTION</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">new-one1</a></li>
+ <li><a href="/docs/5b6dfdfb0428631d7a89de5a/" title=new-one1>new-collection</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">sometestco</a></li>
+ <li><a href="/docs/5b7d68250428631d7a8a432b/" title=sometestco>Some Docs</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">No-ARTICLES</a></li>
+ <li><a href="/docs/5b9232a50428631d7a8acf9f/" title=No-ARTICLES>Coll-with-no-articles</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">Knowledge Base</a></li>
+ <li><a href="/docs/5b7d6a5e0428631d7a8a434c/" title="Knowledge Base">Articles</a></li>
+ <li><a href="/docs/5a02ca882c7d3a272c0d7bcb/" title="Knowledge Base">Asdffghfsgffddgfhhgfgdffhgfdfggdsafdgfasfsdfsdfadasdfsadasdfsdf</a></li>
+ <li><a href="/docs/5c46012d2c7d3a66e32d72bb/" title="Knowledge Base">HS Knowledge Base</a></li>
+ <li><a href="/docs/5ad518582c7d3a0e93676193/" title="Knowledge Base">lskdflkf</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">proknow</a></li>
+ <li><a href="/docs/5bbed4dd042863158cc74b12/" title=proknow>something</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">Remove me 2</a></li>
+ <li><a href="/docs/5bca163c2c7d3a04dd5be790/" title="Remove me 2">hfsdjksfdjk</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">remove me 3</a></li>
+ <li><a href="/docs/5bca16632c7d3a04dd5be792/" title="remove me 3">lalala</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">remove me 4</a></li>
+ <li><a href="/docs/5bca1675042863158cc7a672/" title="remove me 4">fjdsklfjsdlk</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">remove me 5</a></li>
+ <li><a href="/docs/5bca1687042863158cc7a675/" title="remove me 5">vhsjk</a></li>
+ <li class=divider></li>
+ <li class=disabled><a tabindex=-1 href="javascript:void(0);">remove me 6=7</a></li>
+ <li><a href="/docs/5bca169d2c7d3a04dd5be796/" title="remove me 6=7">jkfdsl</a></li>
+ </ul>
+ </div>
+ </li>
+ <li class="dropdown reports">
+ <a href="#" data-target="#" class=dropdown-toggle data-toggle=dropdown>Reports <b class=caret></b></a>
+ <ul class=dropdown-menu role=menu>
+ <li><a href="/reports/all-channels/">All Channels</a></li>
+ <li><a href="/reports/email/">Email</a></li>
+ <li><a href="/reports/chat/">Chat</a></li>
+ <li><a href="/reports/phone/">Phone</a></li>
+ <li><a href="/reports/company/">Company</a></li>
+ <li><a href="/reports/happiness/">Happiness</a></li>
+ <li class=js-docs-report><a href="/reports/docs/">Docs</a></li>
+ </ul>
+ </li>
+ <li>
+ <a href="/customers/">Customers</a>
+ </li>
+ <li class="dropdown manage">
+ <a href="#" data-target="#" class=dropdown-toggle data-toggle=dropdown>Manage <b class=caret></b></a>
+ <ul role=menu class="dropdown-menu active">
+ <li><a href="/apps/" title=Apps>Apps</a></li>
+ <li><a href="/settings/beacons/">Beacons</a></li>
+ <li><a href="/settings/company/">Company</a></li>
+ <li><a href="/settings/docs" class=docs>Docs</a></li>
+ <li><a href="/settings/mailboxes/">
+ Mailboxes
+ </a></li>
+ <li><a href="/settings/tags/">Tags</a></li>
+ <li><a href="/teams/">Teams</a></li>
+ <li><a href="/users/">Users</a></li>
+ </ul>
+ </li>
+ </ul>
+ <div class="u-clearfix u-pull-right">
+ <ul class="nav-secondary u-pull-left c-nav-secondary">
+ <li class="nux dropdown c-nux u-d-none u-d-inline-block@lg" id=nux-component>
+ </li>
+ <li class=c-referral-share id=referral-share>
+ </li>
+ <li class="notifications dropdown c-notification-dropdown">
+ <a href="#" class=dropdown-toggle data-toggle=dropdown title=Notifications>
+ <i class=icon-bell-lg></i><span class=c-notification-dropdown__indicator style="display:none;"></span>
+ </a>
+ <div class="dropdown-menu dropdown-menu-right" id=notification-history>
+ <div id=overlay-region>
+ <div class="c-notification-history c-card">
+ <div id=notification-history-header class=c-notification-history__header>
+ <header class=o-flexy>
+ <div class="o-flexy__block u-pad-l-3">
+ <h1 class="c-notification-history__title tx-400 tx-lh-reset">
+ Notifications
+ </h1>
+ </div>
+ </header>
+ </div>
+ <div id=blank-slate class="u-mrg-v-8 u-mrg-h-auto u-width-fx-11">
+ <div class="slate-header solo">
+ <img src="https://dhmmnd775wlnp.cloudfront.net/3398189b92/images/loader-64-b-t.gif" width=32 height=32 class=u-mrg-b-4>
+ <h3 class="tx-400 t-tx-charcoal-200">Loading notifications...</h3>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </li>
+ <li class="helpIcon dropdown"><a href="#" class=dropdown-toggle data-toggle=dropdown title=Help><i class=icon-help></i><b class=caret></b></a>
+ <ul class="dropdown-menu pull-right" role=menu>
+ <li><a href="https://docs.helpscout.com" target=_blank class=beacon-trigger>Get Help</a></li>
+ <li><a href="https://www.helpscout.com/classes/" target=_blank title="Help Scout Classes">Classes and Training</a></li>
+ <li><a href="/getting-started-videos/" data-wrap-class=gs-videos class="fancyNoTitle width:715 height:565" title="Getting Started Videos">Video Tutorials</a></li>
+ <li><a href="/keyboard-shortcuts/" class="fancyNoTitle width:715 height:550" title="Keyboard Shortcuts (?)" id=keybindFrame>Keyboard Shortcuts</a></li>
+ <li><a href="http://developer.helpscout.net" target=_blank>Developers</a></li>
+ <li><a href="/dashboard/updates/" class="">Latest Updates</a></li>
+ <li><a href="https://status.helpscout.com" target=_blank>Status <i id=status-ind class=""></i></a></li>
+ </ul>
+ </li>
+ <li class=c-nav-secondary__search>
+ <div id=navSearch>
+ <form action="/search/" method=get class=nav-search>
+ <input type=text class=search-query id=searchField name=query autocomplete=off>
+ <button type=submit id=searchBtn name=searchBtn><i class=icon-search></i></button>
+ </form>
+ <section id=quickResults style=display:none></section>
+ </div>
+ </li>
+ <li class="js-account-dropdown dropdown" id=AccountDropdown>
+ <div class=c-AccountDropdown>
+ <div class=c-AccountDropdownAvatar>
+ <div class="c-AccountDropdownAvatar__avatar c-avatar c-avatar--xs">
+ <img class=c-avatar__image>
+ </div>
+ <div class=c-AccountDropdownAvatar__indicator></div>
+ </div>
+ </div>
+ </li>
+ </ul>
+ </div>
+ </header>
+ <div id=searchActionsBoxRegion></div>
+ <div class="c-alert is-error" style="display:none;">
+ <div class=c-alert__content>
+ <i class=icon-alert></i>
+ <div class=c-alert__block data-cy=errorAlert>
+ </div>
+ </div>
+ </div>
+ <section class=main-col>
+ <div id=pageTitle></div>
+ <section id=content class=narrow></section>
+ <script>var appData={mailboxes:[{"id":138368,"name":"Alpha \u8a9e Hu\u00e1y\u01d4; \u4e2d\u6587","email":"alphaitsrssag@pokemail.net","slug":"ba45017a27b54f63","isDemo":false,"replyAsAlias":"0","folders":{"unassigned":{"id":"1867533","name":"Unassigned","count":25},"mine":{"id":"1955847","name":"Mine","count":1},"needsattn":{"id":"1867534","name":"Needs Attention","count":0},"drafts":{"id":"1867535","name":"Drafts","count":26},"assigned":{"id":"1867536","name":"Assigned","count":26}},"chatCounts":{"mailboxId":138368,"total":0,"unassigned":0,"agents":[]}},{"id":138367,"name":"Dashing Dish","email":"random@mailybox.com","slug":"ea299670008190d4","isDemo":false,"replyAsAlias":"1","folders":{"unassigned":{"id":"1867526","name":"Unassigned","count":267},"mine":{"id":"1955848","name":"Mine","count":5},"needsattn":{"id":"1867527","name":"Needs Attention","count":0},"drafts":{"id":"1867528","name":"Drafts","count":43},"assigned":{"id":"1867529","name":"Assigned","count":41}},"chatCounts":{"mailboxId":138367,"total":0,"unassigned":0,"agents":[]}},{"id":172819,"name":"Dont_Confirm!","email":"dont@confirm.com","slug":"7e11446fbbe6e48d","isDemo":false,"replyAsAlias":"0","folders":{"unassigned":{"id":"2660732","name":"Unassigned","count":1},"mine":{"id":"2660738","name":"Mine","count":0},"needsattn":{"id":"2660733","name":"Needs Attention","count":0},"drafts":{"id":"2660734","name":"Drafts","count":0},"assigned":{"id":"2660735","name":"Assigned","count":0}},"chatCounts":{"mailboxId":172819,"total":0,"unassigned":0,"agents":[]}},{"id":147885,"name":"No","email":"no@beacon.com","slug":"f34ee3176418eeea","isDemo":false,"replyAsAlias":"1","folders":{"unassigned":{"id":"2053753","name":"Unassigned","count":0},"mine":{"id":"2053759","name":"Mine","count":0},"needsattn":{"id":"2053754","name":"Needs Attention","count":0},"drafts":{"id":"2053755","name":"Drafts","count":0},"assigned":{"id":"2053756","name":"Assigned","count":1}},"chatCounts":{"mailboxId":147885,"total":0,"unassigned":0,"agents":[]}},{"id":125385,"name":"Support","email":"titantakedowns@gmail.com","slug":"ae8430630c8c652e","isDemo":false,"replyAsAlias":"1","folders":{"unassigned":{"id":"1644140","name":"Unassigned","count":3329},"mine":{"id":"1955849","name":"Mine","count":19},"needsattn":{"id":"1644141","name":"Needs Attention","count":0},"drafts":{"id":"1644142","name":"Drafts","count":14378},"assigned":{"id":"1644143","name":"Assigned","count":198}},"chatCounts":{"mailboxId":125385,"total":0,"unassigned":0,"agents":[]}},{"id":171010,"name":"Vesnaalias","email":"vesnaalias@gmail.com","slug":"1deb6df2752f80b8","isDemo":false,"replyAsAlias":"0","folders":{"unassigned":{"id":"2615196","name":"Unassigned","count":10},"mine":{"id":"2615202","name":"Mine","count":0},"needsattn":{"id":"2615197","name":"Needs Attention","count":0},"drafts":{"id":"2615198","name":"Drafts","count":6},"assigned":{"id":"2615199","name":"Assigned","count":5}},"chatCounts":{"mailboxId":171010,"total":0,"unassigned":0,"agents":[]}},{"id":180320,"name":"VesnaNotConfirmed","email":"vesna@worx4you.com","slug":"1e72811f97b0c77a","isDemo":false,"replyAsAlias":"0","folders":{"unassigned":{"id":"2872433","name":"Unassigned","count":0},"mine":{"id":"2872439","name":"Mine","count":0},"needsattn":{"id":"2872434","name":"Needs Attention","count":0},"drafts":{"id":"2872435","name":"Drafts","count":0},"assigned":{"id":"2872436","name":"Assigned","count":0}},"chatCounts":{"mailboxId":180320,"total":0,"unassigned":0,"agents":[]}}],member:{"id":271315,"firstName":"Jeff","lastName":"Jeff","isAdmin":true,"isMissingPwd":false},company:{"name":"sometestco","hasDocs":true,"isTrial":true,"showWorkflowsPaidLabel":false,"showRatingsPaidLabel":false,"showOfficeHoursPaidLabel":false,"showAppsPaidLabel":false,"showApiPaidLabel":false,"showCustomFieldsPlusPromo":false,"showTeamsPlusPromo":false,"isRatingsEnabled":true,"isWorkflowsEnabled":true,"areRatingsSupported":true},properties:{"1":true,"2":true,"3":true,"4":true,"5":true,"6":false,"7":false,"25":false,"18":false,"23":false,"8":true,"9":true,"10":true,"11":false,"12":30,"14":true,"13":true,"16":10,"19":true,"21":50,"22":2,"28":true,"30":false},listings:[{"id":374,"date":"Jul 3","name":"July Release Notes","text":"Serve up help documentation four ways with in-page links for Beacon. There&#8217;s also a new SMS integration with Heymarket, mobile configurations for Beacon, and more. <a href=\"https:\/\/www.helpscout.com\/blog\/july-2019-release-notes\" target=\"_blank\">Check out this update<\/a> to see what we've been up to.","type":"Product Updates"}],favs:{"mailboxes":[],"docs":[{"id":"5ba375582c7d3a04dd5ac508","name":"Test Docs V1","pub":true,"cols":[{"id":"5ba3fa9e2c7d3a04dd5ace9f","name":"something","order":1,"isPrivate":false},{"id":"5ba8dbe02c7d3a04dd5ae1f1","name":"Something Else","order":1,"isPrivate":false}],"urlText":"test-docs-v1.helpscoutdocs.com","url":"https:\/\/test-docs-v1.helpscoutdocs.com"},{"id":"5bca16092c7d3a04dd5be78d","name":"Remove me","pub":true,"cols":[{"id":"5bca1615042863158cc7a66e","name":"Collection","order":1,"isPrivate":false}],"urlText":"remove-me.helpscoutdocs.com","url":"https:\/\/remove-me.helpscoutdocs.com"},{"id":"5a02caa204286331992448be","name":"private docs","pub":false,"cols":[{"id":"5a02caad04286331992448bf","name":"col1","order":1,"isPrivate":false},{"id":"5a84236c0428634376d01d2e","name":"col2","order":1,"isPrivate":false}]},{"id":"5ba396da042863158cc692d8","name":"just-another-docs-site","pub":true,"cols":[{"id":"5ba396e82c7d3a04dd5ac82e","name":"just another collection","order":1,"isPrivate":false},{"id":"5ba37563042863158cc68fdb","name":"Test Collection V1","order":1,"isPrivate":false}],"urlText":"just-another-docs-site.helpscoutdocs.com","url":"https:\/\/just-another-docs-site.helpscoutdocs.com"},{"id":"5af23cb90428631126f1d81e","name":"NO-TOUCHY","pub":true,"cols":[{"id":"5af23cc80428631126f1d81f","name":"NO-TOUCHY-COLLECTION","order":1,"isPrivate":false}],"urlText":"no-touchy.helpscoutdocs.com","url":"https:\/\/no-touchy.helpscoutdocs.com"},{"id":"5b6dfdf12c7d3a03f89d949a","name":"new-one1","pub":true,"cols":[{"id":"5b6dfdfb0428631d7a89de5a","name":"new-collection","order":1,"isPrivate":false}],"urlText":"new-one.helpscoutdocs.com","url":"https:\/\/new-one.helpscoutdocs.com"},{"id":"5b7d68172c7d3a03f89dfeeb","name":"sometestco","pub":true,"cols":[{"id":"5b7d68250428631d7a8a432b","name":"Some Docs","order":1,"isPrivate":false}],"urlText":"sometestco.helpscoutdocs.com","url":"https:\/\/sometestco.helpscoutdocs.com"},{"id":"5b9232962c7d3a03f89e8d3f","name":"No-ARTICLES","pub":true,"cols":[{"id":"5b9232a50428631d7a8acf9f","name":"Coll-with-no-articles","order":1,"isPrivate":false}],"urlText":"no-articles.helpscoutdocs.com","url":"https:\/\/no-articles.helpscoutdocs.com"},{"id":"59ef79d42c7d3a055035feb3","name":"Knowledge Base","pub":true,"cols":[{"id":"5b7d6a5e0428631d7a8a434c","name":"Articles","order":1,"isPrivate":false},{"id":"5a02ca882c7d3a272c0d7bcb","name":"Asdffghfsgffddgfhhgfgdffhgfdfggdsafdgfasfsdfsdfadasdfsadasdfsdf","order":1,"isPrivate":true},{"id":"5c46012d2c7d3a66e32d72bb","name":"HS Knowledge Base","order":1,"isPrivate":false},{"id":"5ad518582c7d3a0e93676193","name":"lskdflkf","order":1,"isPrivate":true}],"urlText":"sometestco-3.helpscoutdocs.com","url":"https:\/\/sometestco-3.helpscoutdocs.com"},{"id":"5bbed4d5042863158cc74b11","name":"proknow","pub":true,"cols":[{"id":"5bbed4dd042863158cc74b12","name":"something","order":1,"isPrivate":false}],"urlText":"proknowtester.helpscoutdocs.com","url":"https:\/\/proknowtester.helpscoutdocs.com"},{"id":"5bca16352c7d3a04dd5be78f","name":"Remove me 2","pub":true,"cols":[{"id":"5bca163c2c7d3a04dd5be790","name":"hfsdjksfdjk","order":1,"isPrivate":false}],"urlText":"remove-me-2.helpscoutdocs.com","url":"https:\/\/remove-me-2.helpscoutdocs.com"},{"id":"5bca165d042863158cc7a670","name":"remove me 3","pub":true,"cols":[{"id":"5bca16632c7d3a04dd5be792","name":"lalala","order":1,"isPrivate":false}],"urlText":"remove-me-3.helpscoutdocs.com","url":"https:\/\/remove-me-3.helpscoutdocs.com"},{"id":"5bca166e042863158cc7a671","name":"remove me 4","pub":true,"cols":[{"id":"5bca1675042863158cc7a672","name":"fjdsklfjsdlk","order":1,"isPrivate":false}],"urlText":"remove-me-4.helpscoutdocs.com","url":"https:\/\/remove-me-4.helpscoutdocs.com"},{"id":"5bca1681042863158cc7a674","name":"remove me 5","pub":true,"cols":[{"id":"5bca1687042863158cc7a675","name":"vhsjk","order":1,"isPrivate":false}],"urlText":"remove-me-5.helpscoutdocs.com","url":"https:\/\/remove-me-5.helpscoutdocs.com"},{"id":"5bca16982c7d3a04dd5be795","name":"remove me 6=7","pub":true,"cols":[{"id":"5bca169d2c7d3a04dd5be796","name":"jkfdsl","order":1,"isPrivate":false}],"urlText":"remove-me-6-7.helpscoutdocs.com","url":"https:\/\/remove-me-6-7.helpscoutdocs.com"}]},showBeaconPromo:false};</script>
+ </section>
+ </section>
+ <script type="text/javascript" src="https://dhmmnd775wlnp.cloudfront.net/3398189b92/js/apps/dist/vendors-12aea31728bf37d29c2b.js" webpack-entry=dashboard></script>
+ <script type="text/javascript" src="https://dhmmnd775wlnp.cloudfront.net/3398189b92/js/apps/dist/2fa~apps~authentication~beacons~connection-settings~custom-fields~customer-profile~customers~dashboa~aaa993df-5624b26e48a24becdce7.js" webpack-entry=dashboard></script>
+ <script type="text/javascript" src="https://dhmmnd775wlnp.cloudfront.net/3398189b92/js/apps/dist/dashboard-480de4dbd53713e27bf3.js" webpack-entry=dashboard></script>
+ <div id=connection-failure-component></div>
+ <div id=page-loading><div></div></div>
+ <div id=status-check class=""></div>
+ <script>(function(apiKey){(function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');pendo.initialize({visitor:{id:'271315',email:'buzz+++dev@helpscout.com',role:'account owner',firstName:'Jeff',lastName:'Goldblum',title:'Grandmaster',phone:''},account:{id:'74318',name:'sometestco',planlevel:'Plus - 30'}});})('170770c5-6d96-4c18-400e-c1cd7aaad495');</script>
+ <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"248c08e607","applicationID":"30056445","transactionName":"YlUGMhMECxBTWkJaW1sfMRQISgwNVlxOHURdQA==","queueTime":0,"applicationTime":140,"atts":"ThIFRFseGB4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+ </html>

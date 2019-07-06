@@ -1,0 +1,16 @@
+{
+  "name": "scriptdetector",
+  "version": "0.0.1",
+  "description": "Finds if a script path is something we want to replace",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  }
+}
