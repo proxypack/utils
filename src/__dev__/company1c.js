@@ -1,6 +1,7 @@
-const isFilepathWebpackChunk = require('../index')
+const methods = require('../index')
+const isFilepathWebpackChunk = methods.isFilePathWebpackChunk
 const webpackStats = require('../__mocks__/company1/webpackStats')
-const getAllChunkNames = require('../getAllChunkNames')
+const getAllChunkNames = methods.getAllChunkNames
 
 const fullTemplate = '[name]-[contenthash]-[contenthash]'
 const hashDigestLength = 8
