@@ -12,5 +12,8 @@
   "devDependencies": {
     "jest": "^24.8.0",
     "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "string-similarity": "^3.0.0"
   }
 }
