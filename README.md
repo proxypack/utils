@@ -18,5 +18,8 @@ proxyPackUtils.isFilePathWebpackChunk({
 })
 ```
 
-// can be used with webpackStatsPlugin
+Can be used with webpack-stats-plugin:
 https://www.npmjs.com/package/webpack-stats-plugin
+
+And used internally in ProxyPack:
+https://github.com/helpscout/proxypack
