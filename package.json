@@ -1,13 +1,13 @@
 {
-  "name": "scriptdetector",
+  "name": "ProxyPack Utils",
   "version": "0.0.1",
-  "description": "Finds if a script path is something we want to replace",
+  "description": "Some general Utils for use in ProxyPack",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/index.js",
     "test": "jest --watch"
   },
-  "author": "",
+  "author": "tjbo",
   "license": "ISC",
   "devDependencies": {
     "jest": "^24.8.0",
