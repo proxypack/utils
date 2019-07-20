@@ -10,7 +10,6 @@ function checkIfFileNameIsWebpackChunk({ filename, regexParts }) {
     return regexStr + part.content
   }, '')
   const tail = `${regexParts[regexParts.length - 1].content}$`
-  const expression = head + body + tail
   const _test = new RegExp(`${head}${body}${tail}`)
   return _test.test(filename)
 }
