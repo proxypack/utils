@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "@proxypack/utils",
   "version": "0.0.1",
   "description": "Some general Utils for use in ProxyPack",
   "main": "index.js",
@@ -15,5 +15,17 @@
   },
   "dependencies": {
     "string-similarity": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proxypack/utils.git"
+  },
+  "keywords": [
+    "webpack",
+    "utils"
+  ],
+  "bugs": {
+    "url": "https://github.com/proxypack/utils/issues"
+  },
+  "homepage": "https://github.com/proxypack/utils#readme"
 }
