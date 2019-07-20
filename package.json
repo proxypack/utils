@@ -1,5 +1,5 @@
 {
-  "name": "ProxyPack Utils",
+  "name": "utils",
   "version": "0.0.1",
   "description": "Some general Utils for use in ProxyPack",
   "main": "index.js",
