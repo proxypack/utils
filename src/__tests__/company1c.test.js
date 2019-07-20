@@ -5,7 +5,7 @@ const webpackStats = require('../__mocks__/company1/webpackStats')
 
 const fullTemplate = '[name]-[contenthash]-[contenthash]'
 const hashDigestLength = 8
-const webpackChunkNames = getAllChunkNames(webpackStats)
+const webpackChunkNames = getAllChunkNames({ webpackStats })
 
 describe('detect if file path is webpack chunk', () => {
   it('should return true, because double hash is at end', () => {
