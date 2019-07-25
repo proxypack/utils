@@ -1,7 +1,7 @@
 {
   "name": "@proxypack/utils",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Some general Utils for use in ProxyPack",
   "main": "./src/index.js",
   "scripts": {
@@ -13,9 +13,6 @@
   "devDependencies": {
     "jest": "^24.8.0",
     "nodemon": "^1.19.1"
-  },
-  "dependencies": {
-    "string-similarity": "^3.0.0"
   },
   "repository": {
     "type": "git",
